@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --subtitle-color: brown;
+    --unorder-padding: 1rem;
+    --list-padding: 1rem;
+    --border-bottom: 1px solid rgb(204, 196, 196);
+    --margin-top: 0.8rem;
+}
+
+h2{
+    color: var(--subtitle-color);
+}
+
+    
+
+main img{
+    max-width: 100%;
+    height: auto;
+
+}
+section{
+   margin-inline: 1.4rem;
+   
+}
+/* head section */
+header >*{
+   margin-top: var(--margin-top); 
+}
+
+header h1{
+    font-size: 2rem;
+}
+header h4{
+    font-size: 1.2rem;
+    color: brown;
+}
+header .time{
+    background-color: rgb(241, 221, 221);
+    padding: 1rem;
+    border-radius: 5px;
+}
+header .time ul{
+    padding: 1rem;
+
+}
+
+header .time ul li{
+    padding: 0.5rem;
+}
+header .time ul li::marker{
+   color: brown; 
+}
+ 
+/* article section */
+article{
+    border-bottom: var(--border-bottom);
+    margin-top: var(--margin-top);
+}
+
+
+article ul{
+    padding: 1rem;
+}
+
+article ul li{
+    padding: 0.5rem;
+}
+
+article ul li::marker{
+    color: rgb(163, 74, 74);
+}
+/* aside section */
+aside{
+   border-bottom: var(--border-bottom); 
+   margin-top: var(--margin-top);
+
+}
+
+
+aside ul{
+    padding: 1rem;
+    
+}
+aside ul li{
+    padding: 0.4rem;
+    counter-increment: list;
+    position: relative;
+    list-style-type: none;
+}
+
+aside ul li::before{
+    color: brown;
+    content: counter(list) ".";
+    position: absolute;
+    left: -16px;
+    width: 20px;
+}
+/* foot section */
+footer{
+    margin-top: var(--margin-top);
+    margin-bottom: 1.5rem;
+}
+footer p{
+    margin-block: 0.8rem;
+}
+
+table{
+    width: 100%;
+}
+table, td{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+    border-collapse: collapse;
+}
+
+tr{
+    height: 40px;
+}
+
+td:nth-child(2){
+    color: rgba(165, 42, 42, 0.938);
+    font-weight: 600;
+}
+
+td:nth-child(1){
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+tr:nth-last-child(1){
+   border-bottom: hidden;
+}
+
+
+
+@media screen and (min-width: 40rem){
+    main{
+        margin-inline: 50px;
+    }
+
+    main img{
+        width: 100%;
+        height: 430px;
+        padding: 30px 20px 0 20px;
+        border-radius: 37px 37px 28px 28px;
+    }
+}
